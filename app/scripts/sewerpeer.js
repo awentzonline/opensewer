@@ -124,12 +124,14 @@ function SewerPeer(options) {
     if (!msgType) {
       return;
     }
-    console.log('p2p.in.' + msgType);
+    //log('p2p.in.' + msgType);
     sewerBus.emit('p2p.in.' + msgType, data.data, peerId, dataConnection);
   }
 
   function log(m) {
-    console.log(m);
+    if (console && console.log) {
+      console.log(m);
+    }
   }
 
   return {

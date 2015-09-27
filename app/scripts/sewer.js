@@ -47,8 +47,6 @@ function Sewer(options) {
       obj.position.copy(position);
     }
     scene.add(obj);
-    console.log(scene);
-
     return obj;
   };
 }
