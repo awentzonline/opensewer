@@ -3,7 +3,11 @@
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "peerjs": "~0.3.14",
+    "lodash": "~3.10.1",
+    "threejs": "*",
+    "eventemitter2": "~0.4.14"
   },
   "overrides": {
     "bootstrap-sass": {

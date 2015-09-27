@@ -26,9 +26,25 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <div class="container">
-      
+      <div class="row">
+        <div class="col-xs-4">
+          <form id="chatForm">
+            <input type="text" name="chatText" placeholder="Message">
+          </form>
+        </div>
+        <div class="col-xs-6">
+          <form id="newPeerForm">
+            <input type="text" name="newPeerId" placeholder="Add peer">
+          </form>
+          Your id: <span id="your-id"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div id="opensewer">
+        </div>
+      </div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -44,6 +60,10 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/peerjs/peer.js"></script>
+    <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/threejs/build/three.js"></script>
+    <script src="/bower_components/eventemitter2/lib/eventemitter2.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -63,7 +83,12 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
+    <script src="scripts/vendor/threejs/CSS3DRenderer.js"></script>
+    <script src="scripts/sewerpeer.js"></script>
+    <script src="scripts/sewer3d.js"></script>
+    <script src="scripts/sewer.js"></script>
     <script src="scripts/main.js"></script>
+
     <!-- endbuild -->
   </body>
 </html>
