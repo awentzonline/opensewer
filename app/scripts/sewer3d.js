@@ -13,36 +13,36 @@ function Sewer3d(options) {
   this.init = function (sewerContainer) {
     container = $(sewerContainer);
     camera = new THREE.PerspectiveCamera(70, container.width(), container.height(), 1, 5000);
-  	scene = new THREE.Scene();
+    scene = new THREE.Scene();
 
-  	root = new THREE.Object3D();
-  	scene.add(root);
+    root = new THREE.Object3D();
+    scene.add(root);
 
     renderer = new THREE.CSS3DRenderer();
-  	renderer.setSize( window.innerWidth, window.innerHeight );
-  	container.append(renderer.domElement);
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    container.append(renderer.domElement);
 
-  	window.addEventListener('resize', onWindowResize, false);
+    window.addEventListener('resize', onWindowResize, false);
 
     animate();
   }
 
   function animate() {
-  	requestAnimationFrame( animate );
-  	render();
+    requestAnimationFrame( animate );
+    render();
   }
 
   function render() {
-  	renderer.render(scene, camera);
+    renderer.render(scene, camera);
   }
 
   function onWindowResize() {
     var width = container.width();
     var height = container.height();
-  	camera.aspect = width / height;
-  	camera.updateProjectionMatrix();
-  	renderer.setSize(width, height);
-  	render();
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+    render();
   }
 
   this.getScene = function () {
